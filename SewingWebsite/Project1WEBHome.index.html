@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+<!--metadata-->
+        <meta charset="utf-8">
+<!--keywords-->
+		<meta name="keywords" content="sewing, craft, art, fabric, sew, thread">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sewing Guide</title>
+<!--navidation bar-->
+        <link rel="stylesheet" href="SewingWebsite\Project1WEBCSS.css">
+		<link rel="stylesheet" href="SewingWebsite\Project1WEBCSS2.css">
+    </head>
+    <body>
+        <header>
+            <h1 class="header">How to Sew</h1>
+<!--Navigation list-->
+            <nav class="horizontal">
+                <ul>
+                    <li><a class="button" href="SewingWebsite\Project1WEBHome.index.html">Home</a></li>
+                    <li><a class="button" href="SewingWebsite\Project1WEBAbout.html">About</a></li>
+                    <li><a class="button" href="SewingWebsite\Project1WEBLinks.html">Links</a></li>
+                    <li><a class="button" href="SewingWebsite\Project1WEBContact.html">Contact</a></li>
+                </ul>
+            </nav>
+			<style>
+				nav.horizontal {
+					background-color: pink;
+					}
+				nav.horizontal ul {
+					list-style-type: none;
+					padding: 0;
+					margin: 50;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					
+					}
+
+				nav.horizontal li {
+					margin: 50;
+					}
+
+				nav.horizontal a.button {
+					color: green;
+					font-size: 1.8em;
+					padding: 14px 16px;
+					text-decoration: none;
+					display: block;
+					}
+				nav.horizontal a.button:hover {
+					background-color: rgb(202, 169, 233);
+					color: white;
+					}
+    </style>
+        </header>
+    <title>Simple Clock</title>
+	</head>
+	<script>
+<!--convert number to text-->
+	    function numberToText(value, unit) {
+          return value === 1 ? `${value} ${unit}` : `${value} ${unit}s`;
+}
+        function updateCountdown() {
+            const targetDate = new Date(2023, 11, 25, 0, 0, 0);
+            const currentDate = new Date();
+            const timeDifference = targetDate - currentDate;
+<!--send an alert-->
+			if (timeDifference <= 0) {
+                alert("Merry Christmas!");
+                clearInterval(countdownInterval);
+                document.getElementById('countdown').textContent = "Time's up!";
+                return;
+            }
+<!--math method-->
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+            const countdownElement = document.getElementById('countdown');
+            countdownElement.textContent = `Till Christmas: ${numberToText(days, 'day')} ${numberToText(hours, 'hour')} ${numberToText(minutes, 'minute')} ${numberToText(seconds, 'second')}`;
+}
+<!--run command at specified interval-->
+            const countdownInterval = setInterval(updateCountdown, 1000);
+            updateCountdown();
+    </script>
+	<style>
+		#countdown-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            
+        }
+        #countdown {
+            font-size: 1.4em;
+            text-align: center;
+            color: green; 
+        }
+	</style>
+
+<!--grouping-->
+            <div>
+                <h3>A Beginners Guide to Sewing</h3>
+                <p>This website is full of useful links that helped me a lot during my learning process. It seems daunting to learn new things but
+                    taking it step by step is key.</p>
+            <div class="float">
+<!--images-->
+                <img src="SewingWebsitePictures\UsingASewingMachine.jpg" alt="Using a sewing machine"/>
+                <img src="SewingWebsitePictures\VariousSewingSupplies.jpg" alt="Various sewing supplies"/>
+                <img src="SewingWebsitePictures\Handstitches.jpg" alt="Handstitches"/>
+            </div>
+            <div>
+                <h4>What you need to get started</h4>
+                <p>You'll need thread, a sewing machine, scissors, and fabric. This page has useful links to supplies that
+                    are needed for sewing. I use the <a href="https://www.kenssewingcenter.com/brother-xr9550-computerized-165-stitch-sewing-machine-refurbished.html">Brother XR9550</a>
+                    sewing machine. I bought it secondhand and it works great. This  <a href="SewingWebsite\Project1WEBLinks.html">page</a> has some useful links for sewing supplies.
+                </p>
+                <img src="SewingWebsitePictures\SewingMachine.jpg" alt="Brother sewing machine"/>
+            </div>
+            <div>
+                <h4>Helpful tutorials</h4>
+                <p>There are a lot of helpful tutorials you can find online. You can also go to an in-person sewing class if 
+                    that style of learing is better for you. I am self-taught so it is possible to learn on your own. <a href="https://www.youtube.com/@bernadettebanner">Bernadette Banner</a> 
+                    is one of the people that inspired me to get started sewing. She is so talented and has perfect hand stitches and fun sewing videos. <a href="https://www.youtube.com/results?search_query=evelyn+wood">Evelyn Wood</a> 
+                    has so many helpful tutorials that are helpful when learning how to sew. I have many other helpful links on this <a href="SewingWebsite\Project1WEBLinks.html">page</a>.</p>
+                <img src="SewingWebsitePictures\Bernadette.jpg" alt="Bernadette"/>
+                <img src="SewingWebsitePictures\EvelynWood.jpg" alt="Evelyn"/>
+            </div>
+            <div>
+                <h4>Free Patterns</h4>
+                <p>Another thing you need to sew cool items is patterns. <a href="SewingWebsite\Project1WEBLinks.html">Patterns</a> are used to make clothing items.
+                    The pattern comes on paper, you cut out the shapes, then stitch them together. You can get 
+                    them for <a href="https://www.moodfabrics.com/blog/category/free-sewing-patterns/">free</a> online or you can <a href="https://simplicity.com/simplicity-patterns">purchase</a> them. My first sewing projects were made using free 
+                    sewing patterns. <a href="https://www.youtube.com/watch?v=tBudnRKg_r8">This</a> is helpful for understanding sewing patterns.
+                </p>
+                <img src="SewingWebsitePictures\BucketHatPattern.jpg" alt="Bucket hat pattern"/>
+                <img src="SewingWebsitePictures\SewingPattern.jpg" alt="Cutting a pattern"/>
+				<div id="countdown"></div>
+            </div>
+        </body>
+        <footer>
+<!--current date/time calling javascript-->
+		<p>
+		<div id="date"></div>
+		<script>
+        function updateClock() {
+            const currentDateTime = new Date();
+            const year = currentDateTime.getFullYear();
+            const month = currentDateTime.getMonth() + 1; 
+            const day = currentDateTime.getDate();
+			const formattedDate = `${month < 10 ? '0' + month : month}/${day < 10 ? '0' + day : day}/${year}`;
+			const dateElement = document.getElementById('date');
+			dateElement.textContent = `${formattedDate}`;
+			}
+			setInterval(updateClock, 1000);
+			updateClock();
+		</script>
+		</p>
+		    <p><div id="clock"></div>
+    <script>
+        function updateClock() {
+            const currentTime = new Date();
+            let hours = currentTime.getHours();
+            const minutes = currentTime.getMinutes();
+            const seconds = currentTime.getSeconds();
+            const amPm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12 || 12;
+            const formattedHours = hours < 10 ? '0' + hours : hours;
+            const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+            const formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
+            const clockElement = document.getElementById('clock');
+            clockElement.textContent = `${formattedHours}:${formattedMinutes}:${formattedSeconds} ${amPm}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script></p>
+	
+	
+            <p>Author: Zoe Potts</p>
+<!--character references-->
+			<p><a href="mailto:zpotts01@email.cpcc.edu">Email &nbsp;&nbsp;&nbsp;&nbsp;&copy;</a></p>
+			
+        </footer>
+</html>

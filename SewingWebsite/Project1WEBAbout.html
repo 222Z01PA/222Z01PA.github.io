@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+<!--keywords-->
+		<meta name="keywords" content="sewing, craft, art, fabric, sew, thread">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sewing Guide</title>
+        <link rel="stylesheet" href="SewingWebsite\Project1WEBCSS.css">
+		<link rel="stylesheet" href="SewingWebsite\Project1WEBCSS2.css">
+    </head>
+    <body>
+        <header>
+            <h1>About</h1>
+                <nav class="horizontal">
+                <ul>
+                    <li><a class="button" href="SewingWebsite\Project1WEBHome.index.html">Home</a></li>
+                    <li><a class="button" href="SewingWebsite\Project1WEBAbout.html">About</a></li>
+                    <li><a class="button" href="SewingWebsite\Project1WEBLinks.html">Links</a></li>
+                    <li><a class="button" href="SewingWebsite\Project1WEBContact.html">Contact</a></li>
+                </ul>
+                </nav>
+				<style>
+				nav.horizontal {
+					background-color: pink;
+					}
+				nav.horizontal ul {
+					list-style-type: none;
+					padding: 0;
+					margin: 50;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					
+					}
+
+				nav.horizontal li {
+					margin: 50;
+					}
+
+				nav.horizontal a.button {
+					color: green;
+					font-size: 1.8em;
+					padding: 14px 16px;
+					text-decoration: none;
+					display: block;
+					}
+				nav.horizontal a.button:hover {
+					background-color: rgb(202, 169, 233);
+					color: white;
+					}
+    </style>
+        </header>
+		
+        <div>
+            <h3>My Sewing History</h3>
+<!--text-level elements-->
+            <p>I was taught how to hand sew at a young age, but only became serious about sewing early 2023. I don't have that much expierence 
+                but I've made <strong>great</strong> progress. We had a sewing machine sitting in our garage so I decided to make good use out of it. My first 
+                project was a bucket hat. Then I wanted to try something simple and tried making a tank top. That ended up being my most <strong>difficult</strong> 
+                project because of my <em>bad</em> fabric choice and my <em>old cheap</em> sewing machine. I moved on to making a milkmaid style top. It became 
+                difficult because my sewing machine wasn't wokring properly. I decided to buy a new sewing machine which has been working wonderfully. 
+                Then I finished my milkmaid top. After that I bought some patterns and started making a dress. I worked slowly but regularly on the dress.
+                It turned out amazing. I also finished that <strong>difficult</strong> tanktop with the help of my new sewing machine.</p>
+        </div>
+        <div>
+            <h3>My Projects</h3>
+            <h6>Bucket Hat</h6>
+                <img src="SewingWebsitePictures\MeWithHat.jpg" alt="Bucket Hat"/>
+            <h6>Milkmaid Top</h6>
+                <img src="SewingWebsitePictures\AthenaTop.jpg" alt="Milkmaid Top"/>
+            <h6>Tanktop</h6>
+                <img src="SewingWebsitePictures\TankTop.jpg" alt="Tanktop"/>
+        </div>
+    </body>
+    <footer>
+<!--current date/time calling javascript-->
+		<p>
+		<div id="date"></div>
+		<script>
+        function updateClock() {
+            const currentDateTime = new Date();
+            const year = currentDateTime.getFullYear();
+            const month = currentDateTime.getMonth() + 1; 
+            const day = currentDateTime.getDate();
+			const formattedDate = `${month < 10 ? '0' + month : month}/${day < 10 ? '0' + day : day}/${year}`;
+			const dateElement = document.getElementById('date');
+			dateElement.textContent = `${formattedDate}`;
+			}
+			setInterval(updateClock, 1000);
+			updateClock();
+		</script>
+		</p>
+	<p><div id="clock"></div>
+    <script>
+        function updateClock() {
+            const currentTime = new Date();
+            let hours = currentTime.getHours();
+            const minutes = currentTime.getMinutes();
+            const seconds = currentTime.getSeconds();
+            const amPm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12 || 12;
+            const formattedHours = hours < 10 ? '0' + hours : hours;
+            const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+            const formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
+            const clockElement = document.getElementById('clock');
+            clockElement.textContent = `${formattedHours}:${formattedMinutes}:${formattedSeconds} ${amPm}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script></p>
+        <p>Author: Zoe Potts</p>
+        <p><a href="mailto:zpotts01@email.cpcc.edu">Email &nbsp;&nbsp;&nbsp;&nbsp;&copy;</a></p>
+    </footer>
+</html>
